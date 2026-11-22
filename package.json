@@ -1,0 +1,25 @@
+{
+  "name": "noha-pay",
+  "version": "0.1.0",
+  "description": "Self-hosted UPI payments straight to your own bank account, with Noha Money store wallets.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.ts",
+    "dev": "node --disable-warning=ExperimentalWarning --watch src/server.ts",
+    "cli": "node --disable-warning=ExperimentalWarning src/cli.ts",
+    "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "mailauth": "8.0.4",
+    "qrcode": "1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/qrcode": "1.5.6",
+    "typescript": "7.0.2"
+  }
+}
